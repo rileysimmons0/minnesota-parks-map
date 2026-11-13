@@ -9,4 +9,16 @@ require(["esri/views/MapView", "esri/WebMap"], (MapView, WebMap) => {
     map: webmap,
     container: "viewDiv"
   });
+
+  const homeButton = document.getElementById("clickButton");
+
+  // Save the map's original view before the user pans or zooms.
+  view.when(() => {
+    const originalView = view.extent.clone();
+    homeButton.disabled = false;
+
+    homeButton.addEventListener("click", () => {
+      view.goTo(originalView);
+    });
+  });
 });
