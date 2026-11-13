@@ -9,36 +9,19 @@ body,
 
 #buttonContainer {
   position: absolute;
-  top: 16px;
-  right: 16px;
-  z-index: 10;
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  align-items: stretch;
+  top: 10px;
+  right: 10px;
 }
 
-#clickButton,
-#parkFinderLink {
-  display: block;
-  background: #285943;
+#buttonContainer a {
+  display: inline-block;
+  padding: 10px 15px;
+  background-color: #285943;
   color: white;
-  border: 0;
-  border-radius: 6px;
-  padding: 11px 15px;
-  font: 600 14px Arial, sans-serif;
-  text-align: center;
   text-decoration: none;
-  cursor: pointer;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, .18);
+  border-radius: 6px;
 }
 
-#clickButton:hover:not(:disabled),
-#parkFinderLink:hover {
-  background: #173d2d;
-}
-
-#clickButton:disabled {
-  opacity: .65;
-  cursor: default;
+#buttonContainer a:hover {
+  background-color: #173d2d;
 }
